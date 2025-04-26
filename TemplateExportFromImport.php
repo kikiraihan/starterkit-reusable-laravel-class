@@ -11,6 +11,29 @@ class TemplateExportFromImport implements FromArray, WithHeadings, ShouldAutoSiz
     protected $headings;
     protected $data;
 
+    // requirement
+    // tambahkan route ini di web.php
+    // // for downloading template
+    // Route::get('/export-template', function (\Illuminate\Http\Request $request) {
+    //     $importClass = $request->get('import');
+    //     $data = json_decode($request->get('data', '{}'), true);
+
+    //     if (!class_exists($importClass)) {
+    //         abort(404, 'Import class not found.');
+    //     }
+    //     if ($data) {
+    //         $export = new TemplateExportFromImport($importClass, $data);
+    //     }
+    //     else{
+    //         $export = new TemplateExportFromImport($importClass);
+    //     }
+
+    //     $filename = 'template-' . class_basename($importClass) . '-' . now()->format('YmdHis') . '.xlsx';
+
+    //     return Excel::download($export, $filename);
+    // })->name('export-template');
+
+
     //cara pemakaian
     // Export template kosong (3 baris kosong)
     // return Excel::download(new TemplateExportFromImport(SalesmanRecordImport::class), 'template_sales.xlsx');
